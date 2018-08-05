@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+	<bean id="warrior_unit" class="org.tyaa.springctx1.builder.Unit">
+		<!-- Unit(IPerson _person, ITool _tool) -->
+		<constructor-arg type="org.tyaa.springctx1.interfaces.IPerson" ref="warrior"></constructor-arg>
+		<constructor-arg type="org.tyaa.springctx1.interfaces.ITool" ref="sword"></constructor-arg>
+		<!-- getTool/setTool -->
+		<!-- <property name="tool" ref="plow"></property> -->
+	</bean>
+	
+	<bean id="peasant" class="org.tyaa.springctx1.implementations.Peasant"></bean>
+	<bean id="warrior" class="org.tyaa.springctx1.implementations.Warrior"></bean>
+	
+	<bean id="sword" class="org.tyaa.springctx1.implementations.Sword"></bean>
+	<bean id="plow" class="org.tyaa.springctx1.implementations.Plow"></bean>
+</beans>
