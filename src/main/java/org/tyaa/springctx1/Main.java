@@ -21,12 +21,17 @@ public class Main {
 				new ClassPathXmlApplicationContext("AppContext.xml");
 		
 		//Из контекста получаем составной бин
-		Unit warriorUnit = (Unit) context.getBean("warrior_unit");
+		//Unit warriorUnit = (Unit) context.getBean("warrior_unit");
 		
 		//Вызываем у бина все методы
-		warriorUnit.show();
-		warriorUnit.say("Hello");
-		warriorUnit.testActions();
+		//warriorUnit.show();
+		//warriorUnit.say("Hello");
+		//warriorUnit.testActions();
+                
+                Unit protectorUnit = (Unit) context.getBean("protector_unit");
+                protectorUnit.show();
+		protectorUnit.say("Hello");
+		protectorUnit.testActions();
 	}
 
 }
