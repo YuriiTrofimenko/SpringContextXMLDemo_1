@@ -16,16 +16,17 @@ public class Unit implements IUnit {
 		super();
 	}
 
-	public Unit(IPerson _person, ITool _tool) {
+	//Не использовать знак подчеркивания в именах аргументов конструкторов
+	public Unit(IPerson person, ITool tool) {
 		super();
-		mPerson = _person;
-		mTool = _tool;
+		mPerson = person;
+		mTool = tool;
 	}
 	
-	public Unit(String _nationality, int _level) {
+	public Unit(String nationality, int level) {
 		super();
-		mNationality = _nationality;
-		mLevel = _level;
+		mNationality = nationality;
+		mLevel = level;
 	}
 
 	public void testActions() {
@@ -56,8 +57,34 @@ public class Unit implements IUnit {
 		mPerson = _person;
 	}
 
+	public String getNationality() {
+		return mNationality;
+	}
+
+	public void setNationality(String _nationality) {
+		mNationality = _nationality;
+	}
+
+	public int getLevel() {
+		return mLevel;
+	}
+
+	public void setLevel(int _level) {
+		mLevel = _level;
+	}
+
 	public void show() {
 		
 		System.out.printf("Nationality: %s; level: %d\n", mNationality, mLevel);
+	}
+	
+	public void onInit() {
+		
+		System.out.println("init " + this.toString());
+	}
+	
+	public void onDestroy() {
+		
+		System.out.println("destroy " + this.toString());
 	}
 }

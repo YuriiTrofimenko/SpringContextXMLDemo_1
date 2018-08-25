@@ -28,10 +28,25 @@ public class Main {
 		//warriorUnit.say("Hello");
 		//warriorUnit.testActions();
                 
-                Unit protectorUnit = (Unit) context.getBean("protector_unit");
-                protectorUnit.show();
-		protectorUnit.say("Hello");
-		protectorUnit.testActions();
+                Unit protectorUnit = (Unit) context.getBean("protector_unit_2");
+                //protectorUnit.show();
+               // protectorUnit.say("Hello");
+                //protectorUnit.testActions();
+                //System.out.println(protectorUnit);
+                
+               Unit protectorUnit2 = (Unit) context.getBean("protector_unit_2");
+                //System.out.println(protectorUnit2);
+                
+                Unit protectorUnit3 = (Unit) context.getBean("protector_unit");
+                //System.out.println(protectorUnit3);
+                
+                Unit protectorUnit4 = (Unit) context.getBean("protector_unit");
+                //System.out.println(protectorUnit4);
+                
+                //protectorUnit = null;
+                //protectorUnit2 = null;
+                
+                //System.gc();
 	}
 
 }
