@@ -12,10 +12,18 @@
 		<!-- getTool/setTool -->
 		<!-- <property name="tool" ref="plow"></property> -->
 	</bean>
+        
+        <bean id="protector_unit" class="org.tyaa.springctx1.builder.Unit">
+            <constructor-arg type="org.tyaa.springctx1.interfaces.IPerson" ref="protector"></constructor-arg>
+            <constructor-arg type="org.tyaa.springctx1.interfaces.ITool" ref="shield"></constructor-arg>
+        </bean>
 	
 	<bean id="peasant" class="org.tyaa.springctx1.implementations.Peasant"></bean>
 	<bean id="warrior" class="org.tyaa.springctx1.implementations.Warrior"></bean>
 	
 	<bean id="sword" class="org.tyaa.springctx1.implementations.Sword"></bean>
 	<bean id="plow" class="org.tyaa.springctx1.implementations.Plow"></bean>
+        
+        <bean id="protector" class="org.tyaa.springctx1.implementations.Protector"></bean>
+        <bean id="shield" class="org.tyaa.springctx1.implementations.Shield"></bean>
 </beans>
